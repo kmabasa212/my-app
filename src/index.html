@@ -1,17 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        h1{
+            text-decoration:underline;
+            text-align: center;
+            color:#ffb5b5 ;
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+        h2{
+            text-align: center;
+            color: blue;
+        }
+        strong{
+            color:#0092ca ;
+        }
+        a{
+            text-decoration: none;
+            color: #eb2632;
+        }
+        body{
+            background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+        }
+        button{
+            display: block;
+            margin: 0 auto;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size:small;
+            color: #FF1361;
+            border-color: #FF1361;
+            background-color:pink;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        .pics img{
+            width: 150px;
+            height: 150px;
+           /* border-radius: 50%; */
+            object-fit: cover;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease; 
+        }
+        .pics img:hover {
+            transform: scale(1.1);
+        }
+        .head2{
+            text-decoration: none;
+           /* color: #f70776;*/
+        }
+    </style>
 </head>
-
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
-</body>
+    <h1>Puppies</h1>
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/546/original/puppy.jpeg?1712099401" alt="puppy">
+    <hr>
+    <h2>Tips to know before you adopt a puppy🐶</h2>
+    <hr>
+    <h4>
+        Create space and make sure you have toys to enrich them: <strong>puppies need space to play, and toys to keep them occupied</strong> .
+        Provide somewhere for your puppy to rest: <strong>this could be a cosy crate, hiding place or bed in a quiet, draught-free place where your puppy can sleep, undisturbed</strong>.
+        Take a blanket from the puppy’s first home – bring this back with you so they have something familiar and comfortable to snuggle in.
+        Remove anything <strong> <em>poisonous</em> </strong> or that you don’t want them chewing.
+        Find a <em>VET</em> – you can always find a local vet in your area or visit us in Grassy Park and our vets will happily assist you.
+        Arrange for puppy training classes to set your pup up for success – these can get booked up, so find a class and sign up as soon as you know you’re getting a puppy.
+        By the time your puppy comes home with you, they should have:<strong> had their first puppy vaccination, started potty training, been introduced to new situations and people.</strong>
+    </h4>
 
+    <a href="https://capespca.co.za/adopt/dogs/puppy-adoption-checklist/" target="_blank">For more info about puppies 🐕 click me ❤️</a>
+    <div class="pics">
+        <h1 class="head2">Look at us🤗</h1>
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/550/original/1.jpg?1712101336" alt="puppies">
+        <br>
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/552/original/2.jpg?1712101397" alt="puppies">
+        <br>
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/553/original/3.jpg?1712101430" alt="puppies">
+        <br>
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/554/original/R.jpeg?1712101486" alt="puppies">
+
+    </div>
+    <br>
+    <br>
+
+    <button>Click me</button>
+
+    <script>
+       function dog(){
+        let myName= prompt("What is your name?");
+        alert("Hello "+myName+" we welcome you❤️" );
+        alert("Make a choice:1,2,3,4");
+        let choice= prompt("What is your choice?");
+        if (choice === "1") {
+            alert("You are awesome👌");
+        } else if (choice === "2") {
+            alert("You are loved😊");
+        } else if (choice === "3") {
+            alert("You make a difference🎉");
+        } else {
+            alert("You are smart👩‍💻");
+        }
+       }
+    
+
+       let but=document.querySelector("button");
+       but.addEventListener("click",dog);
+    </script>
+</body>
 </html>
