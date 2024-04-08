@@ -59,6 +59,11 @@
     </style>
 </head>
 <body>
+    <main>
+        <h1>Vanilla JavaScript App</h1>
+        <p>Loading content from the API: <b id="name">...</b></p>
+        </main>
+
     <h1>Puppies</h1>
     <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/546/original/puppy.jpeg?1712099401" alt="puppy">
     <hr>
@@ -92,6 +97,11 @@
     <button>Click me</button>
 
     <script>
+         (async function() {
+        const { text } = await( await fetch(`/api/message`)).json();
+        document.querySelector('#name').textContent = text;
+    }());
+
        function dog(){
         let myName= prompt("What is your name?");
         alert("Hello "+myName+" we welcome you❤️" );
